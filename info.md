@@ -66,3 +66,19 @@ service network restart
 ```
 > OK 4건시 완료
 ### ssh설정 완료이므로 편하게 원격으로 접속하자 :+1:
+
+### putty 접속 후
+
+#### 편집창 열기
+```
+vi /etc/hosts
+```
+
+#### vi /etc/hosts의 내용은 아래와 같이 
+```
+127.0.0.1 localhost server01
+192.168.56.101 server01.hadoop.com server01
+192.168.56.102 server02.hadoop.com server02
+192.168.56.103 server03.hadoop.com server03
+```
+> :wq로 저장하고 나온다.
