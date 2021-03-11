@@ -22,6 +22,7 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.56.1
 NETWORK=192.168.56.0
 ```
+>> XX:XX:XX:XX:XX:XX 부분은 VirtualBox에서 보관해둔 MAC주소로 대체하여 기입
 
 ### 2. 70-persistent-net.rules 내용 전부삭제
 
