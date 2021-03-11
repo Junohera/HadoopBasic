@@ -56,3 +56,12 @@ No Such file or directory가 출력될 것이나, 무시 :angry:
 ```
 > 설치도중 Is this ok [y/N]: 이 나오면 y로 진행
 >>__명령어 도중 Fail한건이 떨어지는데 정상이므로 안심.__
+
+### reboot 후
+```
+su root
+# pass word 입력
+service network restart
+```
+> OK 4건시 완료
+### ssh설정 완료이므로 편하게 원격으로 접속하자 :+1:
