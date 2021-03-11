@@ -34,3 +34,15 @@ NETWORK=192.168.56.0
 ### 4. ip check
 ```ifconfig eth0```
 > 1번에 입력한 값이 적용되었는지 확인
+
+## package install 4 ssh
+
+1. 초기상태에서는 yum조차 없음.
+
+echo "http://vault.centos.org/6.10/os/x86_64/" > /var/cache/yum/x86_64/6/base/mirrorlist.txt
+echo "http://vault.centos.org/6.10/extras/x86_64/" > /var/cache/yum/x86_64/6/extras/mirrorlist.txt
+echo "http://vault.centos.org/6.10/updates/x86_64/" > /var/cache/yum/x86_64/6/updates/mirrorlist.txt
+
+```
+yum install openssh*
+service ss
