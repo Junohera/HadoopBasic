@@ -48,11 +48,11 @@ echo "http://vault.centos.org/6.10/sclo/x86_64/sclo" > /var/cache/yum/x86_64/6/c
 > 아마 echo 밑의 두줄은 
 No Such file or directory가 출력될 것이나, 무시 :angry:
 ### opehssh 설치
-```yum install openssh*```
-> Is this ok [y/N]: y
-
 ```
+    yum install openssh*
     service sshd restart
     chkconfig sshd on
     reboot
 ```
+> 설치도중 Is this ok [y/N]: 이 나오면 y로 진행
+>>__명령어 도중 Fail한건이 떨어지는데 정상이므로 안심.__
