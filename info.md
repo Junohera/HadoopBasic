@@ -37,7 +37,7 @@ NETWORK=192.168.56.0
 
 ## package install 4 ssh
 
-### 초기상태에서는 yum조차 없음.
+### yum이 없을경우, 아래 echo문 실행
 ```
 echo "http://vault.centos.org/6.10/os/x86_64/" > /var/cache/yum/x86_64/6/base/mirrorlist.txt
 echo "http://vault.centos.org/6.10/extras/x86_64/" > /var/cache/yum/x86_64/6/extras/mirrorlist.txt
@@ -47,6 +47,12 @@ echo "http://vault.centos.org/6.10/sclo/x86_64/sclo" > /var/cache/yum/x86_64/6/c
 ```
 > 아마 echo 밑의 두줄은 
 No Such file or directory가 출력될 것이나, 무시 :angry:
-###
-yum install openssh*
-service ss
+### opehssh 설치
+```yum install openssh*```
+> Is this ok [y/N]: y
+
+```
+    service sshd restart
+    chkconfig sshd on
+    reboot
+```
