@@ -67,18 +67,79 @@ service network restart
 > OK 4건시 완료
 ### ssh설정 완료이므로 편하게 원격으로 접속하자 :+1:
 
-### putty 접속 후
 
-#### 편집창 열기
+## 마지막 설정
+### putty 접속 후 관리자
 ```
-vi /etc/hosts
+# 관리자로 접속
+su root
 ```
 
-#### vi /etc/hosts의 내용은 아래와 같이 
+## 여기서부터 집중해서 마무리
+
+#### vi /etc/hosts 내용 수정
+```vi /etc/hosts```
 ```
 127.0.0.1 localhost server01
 192.168.56.101 server01.hadoop.com server01
 192.168.56.102 server02.hadoop.com server02
 192.168.56.103 server03.hadoop.com server03
 ```
-> :wq로 저장하고 나온다.
+
+#### vi /etc/sysconfig/network 내용 수정
+```vi /etc/sysconfig/network```
+```
+NETWORKING=yes
+NETWORKING_IPV6=no
+HOSTNAME=server01.hadoop.com
+```
+
+#### service network restart
+
+#### vi /etc/selinux/config 내용 수정
+```vi /etc/selinux/config```
+```
+~기존 내용~
+SELINUX=disabled
+~기존 내용~
+```
+
+#### service iptables stop
+#### chkconfig iptables off
+#### chkconfig ip6tables off
+#### sysctl -w vm.swappiness=100
+
+
+
+#### vi /etc/sysctl.conf 내용 추가
+```vi /etc/sysctl.conf```
+```
+~기존 내용~
+vm.swappiness=100
+```
+
+#### vi /etc/rc.local 내용 추가
+```vi /etc/rc.local```
+```
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+```
+
+#### vi /etc/security/limits.conf 내용 추가
+
+```
+~기존내용~
+root soft nofile 65536
+root hard nofile 65536
+*    soft nofile 65536
+*    hard nofile 65536
+root soft nproc  32768
+root hard nproc  32768
+*    soft nproc  32768
+*    hard nproc  32768
+```
+
+```reboot```
+
+## 복제 ㄱ
+
