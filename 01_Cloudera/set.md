@@ -8,4 +8,15 @@
 ## 설정된 프로젝트 부터 시작할 경우,
 1. [프로젝트 다운로드 링크](https://github.com/wikibook/bigdata2nd/archive/master.zip)
 1. [가상머신 환경 다운로드 링크](https://drive.google.com/u/0/uc?id=1oLikMIC6bzt0jNV0n49YNOM0foNPXDZh&export=download)
-1. 
+1. VirtualBox에 다운로드받은 폴더로부터  Server1과 Server2 추가
+1.  내 컴퓨터의 host를 추가
+    - 관리자권한으로 notepad실행
+    - cd C:\Windows\System32\hosts에 하기 내용 추가 후 저장
+    ```
+    192.168.56.101	server01.hadoop.com
+    192.168.56.102	server02.hadoop.com
+    192.168.56.103	server03.hadoop.com
+    ```
+
+## Cloudera Manager Login
+1. [link](http://server01.hadoop.com:7180/)
