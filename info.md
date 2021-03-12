@@ -142,4 +142,3 @@ root hard nproc  32768
 ```reboot```
 
 ## 복제 ㄱ
-
