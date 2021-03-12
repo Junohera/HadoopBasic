@@ -1,1 +1,18 @@
 hadoopDefaultServer.ova
+01_Cloudera/Pilot Project VM.zip
+01_Cloudera/Server01/Server01.vbox
+01_Cloudera/Server01/Server01.vbox-prev
+01_Cloudera/Server01/Server01.vdi
+01_Cloudera/Server01/Logs/VBox.log
+01_Cloudera/Server01/Logs/VBox.log.1
+01_Cloudera/Server01/Logs/VBox.log.2
+01_Cloudera/Server01/Logs/VBox.log.3
+01_Cloudera/Server01/Logs/VBoxHardening.log
+01_Cloudera/Server02/Server02.vbox
+01_Cloudera/Server02/Server02.vbox-prev
+01_Cloudera/Server02/Server02.vdi
+01_Cloudera/Server02/Logs/VBox.log
+01_Cloudera/Server02/Logs/VBox.log.1
+01_Cloudera/Server02/Logs/VBox.log.2
+01_Cloudera/Server02/Logs/VBox.log.3
+01_Cloudera/Server02/Logs/VBoxHardening.log
