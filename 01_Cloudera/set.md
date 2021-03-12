@@ -11,8 +11,9 @@
 1. VirtualBox에 다운로드받은 폴더로부터  Server1과 Server2 추가
 1.  내 컴퓨터의 host를 추가
     - 관리자권한으로 notepad실행
-    - cd C:\Windows\System32\hosts에 하기 내용 추가 후 저장
+    - C:\Windows\System32\drivers\etc\hosts에 하기 내용 추가 후 저장(보안프로그램이 있다면 잠시 off)
     ```
+    ~기존 내용~
     192.168.56.101	server01.hadoop.com
     192.168.56.102	server02.hadoop.com
     192.168.56.103	server03.hadoop.com
