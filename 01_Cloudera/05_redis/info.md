@@ -28,3 +28,7 @@ chmod 755 install_server.sh
 
 ./install_server.sh
 ```
+> enter enter enter enter !!!!!
+
+### check redis server runYn
+```vi /var/log/redis_6379.log```
