@@ -13,6 +13,6 @@ hdfs dfs -ls -R /pilot-pjt/collect/car-batch-log
 
 #### 특정 로그파일 확인
 ``` bash
-hdfs dfs -cat "${출력된 디렉터리/파일명.log}"
-hdfs dfs -cat ""
+hdfs dfs -cat ${출력된 디렉터리/파일명.log}
+hdfs dfs -tail ${출력된 디렉터리/파일명.log}
 ```
