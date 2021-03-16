@@ -31,4 +31,29 @@ chmod 755 install_server.sh
 > enter enter enter enter !!!!!
 
 ### check redis server runYn
-```vi /var/log/redis_6379.log```
+```
+vi /var/log/redis_6379.log
+service redis_6379 status
+service redis_6379 start
+service redis_6379 stop
+```
+
+### check conf
+1. 바인딩 IP 제한 해제 : bind 127.0.0.1 주석처리
+1. 패스워드 입력 해제 : protected-mode yes -> no
+```
+vi /etc/redis/6379.conf
+
+service redis_6379 restart
+```
+
+### redis test
+```
+redis-cli
+set key:1 Hello!BigData
+get key:1
+del key:1
+quit
+```
+
+
