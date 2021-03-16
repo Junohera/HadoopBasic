@@ -4,6 +4,12 @@
 1. jar 교체가 필요
 1. server2의 '/opt/cloudera/parcels/CDH-6.3.2-1.cdh6.3.2.p0.1605554/lib/flume-ng/lib' 위치에 bigdata.smartcar.flume-1.0.jar를 업로드
 
+### 대상폴더로 이동전 tail실행 후 이동 실행
+``` bash
+tail -f /var/log/flume-ng/flume-cmf-flume-AGENT-server02.hadoop.com.log
+mv /home/pilot-pjt/working/SmartCar/SmartCarStatusInfo_20210313.txt /home/pilot-pjt/working/car-batch-log/
+```
+
 ### command
 
 #### 목록 확인
