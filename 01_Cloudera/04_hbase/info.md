@@ -21,3 +21,6 @@ disable 'smartcar_test_table'
 drop 'smartcar_test_table'
 exit
 ```
+
+### hbase 페이지 접속
+[hbase 기본 경로](http://server02.hadoop.com:16010/)
