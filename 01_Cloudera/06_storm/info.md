@@ -95,3 +95,43 @@ service storm-supervisor status
 service storm-ui status
 ```
 [storm-ui link](http://server02.hadoop.com:8088/)
+
+### Storm jar 업로드
+/home/pilot-pjt/working에 bigdata.smartcar.storm-1.0.jar 업로드
+
+### Storm 실행
+``` bash
+storm jar bigdata.smartcar.storm-1.0.jar com.wikibook.bigdata.smartcar.storm.SmartCarDriverTopology DriverCarInfo
+```
+
+### Storm Topology 배포 확인
+[storm-ui link](http://server02.hadoop.com:8088/)의 Topology Summary에 추가된 항목 확인가능
+
+### Storm Topology 제거필요시
+``` bash
+storm kill "${TopologyName}"
+```
+
+### hbase 적재 데이터 확인
+``` bash
+hbase shell
+count 'DriverCarInfo'
+scan 'DriverCarInfo', {LIMIT=>20}
+scan 'DriverCarInfo', {STARTROW=>'00031061301202-Y0005', LIMIT=>1}
+```
+
+### redis 적재 데이터 확인
+``` bash
+redis-cli
+smembers 20210316
+```
+> 과속차량 확인
+
+### redis jar 업로드
+1. /home/pilot-pjt/working에 bigdata.smartcar.redis-1.0.jar업로드
+
+### redis jar 실행
+``` bash
+cd /home/pilot-pjt/working
+java -cp bigdata.smartcar.redis-1.0.jar com.wikibook.bigdata.smartcar.redis.OverSpeedCarInfo 20210316
+```
